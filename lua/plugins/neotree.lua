@@ -9,5 +9,8 @@ return {
     },
     config = function()
         vim.keymap.set('n', '<leader>n', ':Neotree filesystem reveal left <CR>')
+        vim.keymap.set('n', '<leader>e', function()
+          vim.cmd('Neotree close')
+        end, { desc = 'Fermer Neo-tree' })
     end;
 }
