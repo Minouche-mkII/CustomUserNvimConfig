@@ -13,10 +13,15 @@ vim.keymap.set('n', '<A-Down>', '<Cmd>resize -2<CR>', { desc = 'Réduit la haute
 vim.keymap.set('n', '<A-Left>', '<Cmd>vertical resize -2<CR>', { desc = 'Réduit la largeur de la fenêtre' })
 vim.keymap.set('n', '<A-Right>', '<Cmd>vertical resize +2<CR>', { desc = 'Augmente la largeur de la fenêtre' })
 
+vim.keymap.set('n', '<A-h>', '<C-w>h', { desc = 'go to left window' })
+vim.keymap.set('n', '<A-j>', '<C-w>j', { desc = 'go to down window' })
+vim.keymap.set('n', '<A-k>', '<C-w>k', { desc = 'go to up window' })
+vim.keymap.set('n', '<A-l>', '<C-w>l', { desc = 'go to right window' })
+
+
 vim.keymap.set('v', '<C-c>', '"+y', { desc = 'Copier dans le presse-papier système' })
 vim.keymap.set('n', '<C-v>', '"+p', { desc = 'Coller depuis le presse-papier système' })
 vim.keymap.set('v', '<C-x>', '"+d', { desc = 'Couper dans le presse-papier système' })
-
 
 vim.keymap.set('n', '<leader>r', function()
     if vim.wo.relativenumber then
