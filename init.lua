@@ -17,12 +17,23 @@ vim.keymap.set('v', '<C-c>', '"+y', { desc = 'Copier dans le presse-papier syst�
 vim.keymap.set('n', '<C-v>', '"+p', { desc = 'Coller depuis le presse-papier système' })
 vim.keymap.set('v', '<C-x>', '"+d', { desc = 'Couper dans le presse-papier système' })
 
-vim.keymap.set('n', '<leader>r', ':set relativenumber <CR>')
-vim.keymap.set('n', '<leader>e', ':set nornu <CR>')
+
+vim.keymap.set('n', '<leader>r', function()
+    if vim.wo.relativenumber then
+        vim.wo.relativenumber = false
+        vim.wo.number = true -- Garder les numéros absolus
+    else
+        vim.wo.relativenumber = true
+    end
+end, { desc = "Toggle relative line numbers" })
+
 
 vim.keymap.set('i', '(', '()<Left>', { desc = "Insert () and move inside" })
 vim.keymap.set('i', '{', '{}<Left>', { desc = "Insert {} and move inside" })
 vim.keymap.set('i', '[', '[]<Left>', { desc = "Insert [] and move inside" })
 vim.keymap.set('i', '"', '""<Left>', { desc = "Insert \"\" and move inside" })
 vim.keymap.set('i', "'", "''<Left>", { desc = "Insert '' and move inside" })
+
+
+vim.keymap.set('n', '<leader>dd', '<cmd>NoiceDismiss<CR>', { desc = "dismiss notification" })
 
