@@ -43,3 +43,6 @@ vim.keymap.set('i', "'", "''<Left>", { desc = "Insert '' and move inside" })
 vim.keymap.set('n', '<leader>dd', '<cmd>NoiceDismiss<CR>', { desc = "dismiss notification" })
 
 vim.keymap.set('t', '<esc>', '<C-\\><C-n><cmd>FloatermHide<CR>')
+
+
+vim.keymap.set('n', '<A-CR>', ':echo "Ctrl+Enter pressed!"<CR>', { desc = "Example: Ctrl+Enter mapping" })
