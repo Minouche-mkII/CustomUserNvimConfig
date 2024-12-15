@@ -4,6 +4,7 @@ vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
+vim.cmd("set number")
 
 vim.cmd.colorscheme "catppuccin"
 
@@ -12,6 +13,16 @@ vim.keymap.set('n', '<A-Down>', '<Cmd>resize -2<CR>', { desc = 'Réduit la haute
 vim.keymap.set('n', '<A-Left>', '<Cmd>vertical resize -2<CR>', { desc = 'Réduit la largeur de la fenêtre' })
 vim.keymap.set('n', '<A-Right>', '<Cmd>vertical resize +2<CR>', { desc = 'Augmente la largeur de la fenêtre' })
 
-vim.keymap.set('n', '<C-c>', '"+y', { desc = 'Copier dans le presse-papier système' })
+vim.keymap.set('v', '<C-c>', '"+y', { desc = 'Copier dans le presse-papier système' })
 vim.keymap.set('n', '<C-v>', '"+p', { desc = 'Coller depuis le presse-papier système' })
-vim.keymap.set('n', '<C-x>', '"+d', { desc = 'Couper dans le presse-papier système' })
+vim.keymap.set('v', '<C-x>', '"+d', { desc = 'Couper dans le presse-papier système' })
+
+vim.keymap.set('n', '<leader>r', ':set relativenumber <CR>')
+vim.keymap.set('n', '<leader>e', ':set nornu <CR>')
+
+vim.keymap.set('i', '(', '()<Left>', { desc = "Insert () and move inside" })
+vim.keymap.set('i', '{', '{}<Left>', { desc = "Insert {} and move inside" })
+vim.keymap.set('i', '[', '[]<Left>', { desc = "Insert [] and move inside" })
+vim.keymap.set('i', '"', '""<Left>', { desc = "Insert \"\" and move inside" })
+vim.keymap.set('i', "'", "''<Left>", { desc = "Insert '' and move inside" })
+

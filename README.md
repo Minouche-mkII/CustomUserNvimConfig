@@ -1,0 +1,1 @@
+depedances : rigreg zig nerdfont
