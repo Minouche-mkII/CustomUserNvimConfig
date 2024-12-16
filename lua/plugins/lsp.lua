@@ -10,7 +10,8 @@ return {
         config = function()
             require("mason-lspconfig").setup({
                 ensure_installed = {
-                    "lua_ls"
+                    "lua_ls",
+                    "ts_ls"
                 }
             })
         end
@@ -20,6 +21,7 @@ return {
         config = function()
             local lspconfig = require("lspconfig")
             lspconfig.lua_ls.setup({})
+            lspconfig.ts_ls.setup({})
             vim.keymap.set('n', '<leader>d', vim.lsp.buf.hover, { desc = "show documentation of hovered method" })
             vim.keymap.set('n', '<leader>g', vim.lsp.buf.definition, { desc = "go to definition" })
             vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "code action" })
