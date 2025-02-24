@@ -44,5 +44,16 @@ vim.keymap.set('n', '<leader>dd', '<cmd>NoiceDismiss<CR>', { desc = "dismiss not
 
 vim.keymap.set('t', '<esc>', '<C-\\><C-n><cmd>FloatermHide<CR>')
 
+vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = '', -- or other icon of your choice here, this is just what my config has:
+      [vim.diagnostic.severity.WARN] = '',
+      [vim.diagnostic.severity.INFO] = '',
+      [vim.diagnostic.severity.HINT] = '󰌵',
+    },
+  },
+})
 
-vim.keymap.set('n', '<A-CR>', ':echo "Ctrl+Enter pressed!"<CR>', { desc = "Example: Ctrl+Enter mapping" })
+
+

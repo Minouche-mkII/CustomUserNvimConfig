@@ -3,6 +3,7 @@ return {
     config = function()
         require ("nvim-treesitter.install").compilers = { "zig" };
         require("nvim-treesitter.configs").setup({
+            auto_install = true,
             ensure_installed = {"lua", "c_sharp", "java", "html", "css", "javascript"},
             highlight = { enabled = true },
             indent = { enabled = true }
