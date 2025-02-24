@@ -1,3 +1,8 @@
+vim.g.lsp_list = {
+    "lua_ls",
+    "ts_ls"
+}
+
 require("config.lazy")
 
 vim.cmd("set expandtab")
@@ -45,15 +50,17 @@ vim.keymap.set('n', '<leader>dd', '<cmd>NoiceDismiss<CR>', { desc = "dismiss not
 vim.keymap.set('t', '<esc>', '<C-\\><C-n><cmd>FloatermHide<CR>')
 
 vim.diagnostic.config({
-  signs = {
-    text = {
-      [vim.diagnostic.severity.ERROR] = '', -- or other icon of your choice here, this is just what my config has:
-      [vim.diagnostic.severity.WARN] = '',
-      [vim.diagnostic.severity.INFO] = '',
-      [vim.diagnostic.severity.HINT] = '󰌵',
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = '',
+            [vim.diagnostic.severity.WARN] = '',
+            [vim.diagnostic.severity.INFO] = '',
+            [vim.diagnostic.severity.HINT] = '󰌵'
+        },
     },
-  },
 })
 
-
-
+vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticSignError" })
+vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
+vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
+vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
