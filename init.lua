@@ -5,13 +5,14 @@ vim.g.lsp_list = {
 
 require("config.lazy")
 
+vim.cmd.colorscheme "pastelnight"
+
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
 vim.cmd("set softtabstop=4")
 vim.cmd("set shiftwidth=4")
 vim.cmd("set number")
 
-vim.cmd.colorscheme "catppuccin"
 
 vim.keymap.set('n', '<A-Up>', '<Cmd>resize +2<CR>', { desc = 'Augmente la hauteur de la fenêtre' })
 vim.keymap.set('n', '<A-Down>', '<Cmd>resize -2<CR>', { desc = 'Réduit la hauteur de la fenêtre' })

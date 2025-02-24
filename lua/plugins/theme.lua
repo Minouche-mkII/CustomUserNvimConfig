@@ -8,5 +8,11 @@ return {
                 flavour = "macchiato"
             })
         end
+    },
+    {
+        "pauchiner/pastelnight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {}
     }
 }
