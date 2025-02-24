@@ -8,7 +8,7 @@ return {
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
 	config = function()
-		vim.keymap.set("n", "<leader>n", "<cmd>Neotree toggle<CR>")
+		vim.keymap.set("n", "<leader>fn", "<cmd>Neotree toggle<CR>")
 
 		require("neo-tree").setup({
 			default_component_configs = {
