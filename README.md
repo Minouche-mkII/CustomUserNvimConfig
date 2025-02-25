@@ -44,6 +44,10 @@ space + notifications history
 
 space + dd -> dissmiss notifications
 
+command 
+
+:theme -> theme picker
+
 ## plugins
 
 ## test

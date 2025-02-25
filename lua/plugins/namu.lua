@@ -14,7 +14,7 @@ return {
                     enable = false,
                     options = {
                         -- NOTE: if you activate persist, then please remove any vim.cmd("colorscheme ...") in your config, no needed anymore
-                        persist = true, -- very efficient mechanism to Remember selected colorscheme
+                        persist = true,      -- very efficient mechanism to Remember selected colorscheme
                         write_shada = false, -- If you open multiple nvim instances, then probably you need to enable this
                     },
                 },
@@ -23,10 +23,11 @@ return {
                 desc = "Jump to LSP symbol",
                 silent = true,
             })
-            vim.keymap.set("n", "<leader>th", ":Namu colorscheme<cr>", {
-                desc = "Colorscheme Picker",
-                silent = true,
-            })
+            vim.api.nvim_create_user_command('Theme', 'Namu colorscheme', {desc = "theme picker"})
+            -- vim.keymap.set("n", "<leader>th", "", {
+            --     desc = "Colorscheme Picker",
+            --     silent = true,
+            -- })
         end,
     }
 }

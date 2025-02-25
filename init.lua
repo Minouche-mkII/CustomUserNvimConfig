@@ -4,6 +4,7 @@ vim.g.lsp_list = {
 }
 
 require("config.lazy")
+require("config.terminalmanager")
 
 vim.cmd.colorscheme "catppuccin"
 
@@ -39,8 +40,6 @@ vim.keymap.set('n', '<leader>r', function()
 end, { desc = "Toggle relative line numbers" })
 
 vim.keymap.set('n', '<leader>nn', '<cmd>NoiceDismiss<CR>', { desc = "dismiss notification" })
-
-vim.keymap.set('t', '<esc>', '<C-\\><C-n><cmd>FloatermHide<CR>')
 
 vim.diagnostic.config({
     signs = {
