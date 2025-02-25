@@ -1,6 +1,6 @@
 return {
     "voldikss/vim-floaterm",
-    lazy = false, 
+    lazy = false,
     config = function()
         vim.g.floaterm_width = 0.8 -- Largeur (fraction de l'écran)
         vim.g.floaterm_height = 0.8 -- Hauteur (fraction de l'écran)

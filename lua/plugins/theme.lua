@@ -13,6 +13,19 @@ return {
         "pauchiner/pastelnight.nvim",
         lazy = false,
         priority = 1000,
-        opts = {}
+        opts = {},
+        config = function()
+            require('pastelnight').setup({
+                hide_inactive_statusline = true,
+                style = "highContrast"
+            })
+        end
+
+    },
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
     }
 }

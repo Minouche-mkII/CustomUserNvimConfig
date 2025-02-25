@@ -11,6 +11,7 @@ return {
                 dashboard.button("e", "  New file", "<Cmd>ene <BAR> startinsert <CR>"),
                 dashboard.button("f", "  Search file", telescope.find_files),
                 dashboard.button("b", "󰙅  Browse directory", "<Cmd>Neotree toggle<CR>"),
+                dashboard.button("u", "󰚰  Update", "<Cmd>Lazy update<CR>"),
                 dashboard.button("q", "󰅚  Quit NVIM", "<Cmd>qa<CR>")
             }
 
