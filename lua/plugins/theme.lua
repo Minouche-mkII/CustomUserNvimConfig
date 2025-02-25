@@ -5,7 +5,7 @@ return {
         priority = 1000,
         config = function()
             require("catppuccin").setup({
-                flavour = "macchiato"
+                flavour = "frappe"
             })
         end
     },
@@ -17,7 +17,6 @@ return {
         config = function()
             require('pastelnight').setup({
                 hide_inactive_statusline = true,
-                style = "highContrast"
             })
         end
 

@@ -5,7 +5,7 @@ vim.g.lsp_list = {
 
 require("config.lazy")
 
-vim.cmd.colorscheme "pastelnight"
+vim.cmd.colorscheme "catppuccin"
 
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
@@ -38,7 +38,7 @@ vim.keymap.set('n', '<leader>r', function()
     end
 end, { desc = "Toggle relative line numbers" })
 
-vim.keymap.set('n', '<leader>dd', '<cmd>NoiceDismiss<CR>', { desc = "dismiss notification" })
+vim.keymap.set('n', '<leader>nn', '<cmd>NoiceDismiss<CR>', { desc = "dismiss notification" })
 
 vim.keymap.set('t', '<esc>', '<C-\\><C-n><cmd>FloatermHide<CR>')
 
@@ -57,3 +57,4 @@ vim.fn.sign_define("DiagnosticSignError", { text = " ", texthl = "DiagnosticS
 vim.fn.sign_define("DiagnosticSignWarn", { text = " ", texthl = "DiagnosticSignWarn" })
 vim.fn.sign_define("DiagnosticSignInfo", { text = " ", texthl = "DiagnosticSignInfo" })
 vim.fn.sign_define("DiagnosticSignHint", { text = "󰌵", texthl = "DiagnosticSignHint" })
+
