@@ -1,6 +1,5 @@
 vim.g.lsp_list = {
     "lua_ls",
-    "ts_ls"
 }
 
 require("config.lazy")
