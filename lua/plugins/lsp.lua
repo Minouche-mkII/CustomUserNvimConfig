@@ -25,7 +25,10 @@ do
                 for _, lsp in pairs(vim.g.lsp_list) do
                     lspconfig[lsp].setup {
                         -- config auto complete for lsp
-                        capabilities = capabilities
+                        capabilities = capabilities,
+                        diagnostics = {
+                            enable = true
+                        }
                     }
                 end
                 vim.keymap.set('n', '<leader>cd', vim.lsp.buf.hover, { desc = "show documentation of hovered method" })

@@ -1,5 +1,6 @@
 vim.g.lsp_list = {
     "lua_ls",
+    "rust_analyzer"
 }
 
 require("config.lazy")
